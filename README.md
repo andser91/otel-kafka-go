@@ -13,7 +13,7 @@ SendMessages(ctx context.Context, writer *kafka.Writer, messages ...kafka.Messag
 
 ### Consumer 
 The consumer needs to retrieve the instrumented context and create a new Span.
-The function extract take current context and the message and return an instrumented context and a new active Span
+The function "Extract" take current context and the message as parameters and return an instrumented context and a new active Span.
 
 Extract(ctx context.Context, message *kafka.Message) (context.Context, trace.Span)
 
